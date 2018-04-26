@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import xlwt
 import sys, os
+import config
 
 from os.path import isfile, join, splitext, basename
 from collections import OrderedDict
@@ -10,25 +11,19 @@ import simplejson as json
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-#表格结构定义
-infomap = {
-	'H_活动配置.xlsx' : [
-		{"ActList":"ActListData"},
-		{"jamboree":"sevenCarnivalData"}
-	],
-	"J_竞技场配置.xlsx" : [
-		{"buy": "arenaBuy"}
-	]
-}
+#判断输出路径是否存在
+if not os.path.exists(config.excl_path):
+	#创建路径
+	os.makedirs(config.excl_path)
 
-for teble_name, table_info in infomap.items():
+for teble_name, table_info in config.infomap.items():
 	workbook = xlwt.Workbook()
 	for sh_item in table_info:
 		for sh_name, json_name in sh_item.items():
 			worksheet = workbook.add_sheet(sh_name)
-			json_dest = 'data/%s.json' % (json_name)
+			json_dest = '%s%s.json' % (config.json_path, json_name)
 			with open(json_dest, 'r') as f:
-				print teble_name, sh_name
+				print '成功输出表格:%s' % (teble_name)
 				jsonStr = json.load(f)
 				rowCount = 2
 				colCount = -1
@@ -55,6 +50,6 @@ for teble_name, table_info in infomap.items():
 					rowCount = rowCount + 1
 			#break
 		#break
-	table_dest = 'j2x/%s' % (teble_name)
+	table_dest = '%s%s' % (config.excl_path, teble_name)
 	workbook.save(table_dest)
 	#break
