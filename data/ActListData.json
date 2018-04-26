@@ -1,0 +1,63 @@
+[
+    {
+        "background": "JCHD_bg_004", 
+        "createTime": 1, 
+        "cycle ": 1, 
+        "data": 1, 
+        "endTime": 1, 
+        "id": 1, 
+        "intervaldays": 1, 
+        "name": "七天狂欢", 
+        "startTime": 1, 
+        "state": 1, 
+        "table": "jamboree", 
+        "title": "七日狂欢！大家冲冲冲", 
+        "    type": 1
+    }, 
+    {
+        "background": "JCHD_bg_002", 
+        "createTime": 1, 
+        "cycle ": 1, 
+        "data": 1, 
+        "desc": "招募的武将不满意，可花费一定元宝重新招募！   重新招募后上次招募的武将会消失，培养材料及装备等等全部返还！", 
+        "endTime": 1, 
+        "id": 2, 
+        "intervaldays": 1, 
+        "name": "名将谱", 
+        "startTime": 1, 
+        "state": 1, 
+        "table": "hero", 
+        "title": "完成任务，名将任你选！", 
+        "    type": 1
+    }, 
+    {
+        "background": "JCHD_bg_003", 
+        "createTime": 1, 
+        "cycle ": 1, 
+        "data": 1, 
+        "endTime": 1, 
+        "id": 3, 
+        "intervaldays": 1, 
+        "name": "七天累登", 
+        "startTime": 1, 
+        "state": 1, 
+        "table": "login", 
+        "title": "累计7日登陆，领取礼包大奖", 
+        "    type": 1
+    }, 
+    {
+        "background": "JCHD_bg_001", 
+        "createTime": 1, 
+        "cycle ": 1, 
+        "data": 1, 
+        "endTime": 1, 
+        "id": 4, 
+        "intervaldays": 1, 
+        "name": "冲级达人", 
+        "startTime": 1, 
+        "state": 1, 
+        "table": "level", 
+        "title": "限时冲级，狂送豪礼！", 
+        "    type": 1
+    }
+]
